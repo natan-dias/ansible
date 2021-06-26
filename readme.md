@@ -9,7 +9,7 @@
 + Python PIP
 + Configurações do Kerberos via krb5.conf
 + Configurações dos HOSTS e Group_Vars no Ansible
-+ Servidores remotos precisam ser configurados via script PS1
++ Script PS1 disponibilizado deve ser usado apenas em ambientes de TESTES!
 
 ## Segurança dos Group_vars
 
