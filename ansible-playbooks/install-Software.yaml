@@ -1,0 +1,13 @@
+- name: Copy BAT and install package from FileServer on remote windows host
+  hosts: windows
+  tasks:
+    - name: Uninstall AcrobatXI (Example)
+      win_package:
+        product_id: '{AC76BA86-7AD7-FFFF-7B44-AB0000000001}'
+        state: absent
+    - name: Copy AcrobatDC installation files
+      win_copy:
+        src: /files/acrobatDC/
+        dest: C:\Temp
+    - name: Run BAT file and install package - AcrobatDC
+      win_command: C:\Temp\instalar.bat
